@@ -5,7 +5,8 @@ html {
 
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    color: #ffffff; 
 }
 
 body {
@@ -18,18 +19,21 @@ body {
 main{
     display: flex;
     flex-direction: column;
+    margin-top: 45px;
 }
 
 #header {
     position: fixed;
     top: 0px;
-    left: 0px;
+    width: 100%;
     z-index: 2;
-    background-color: #006efe;
+    background: #0174b6c8;
+    backdrop-filter: blur(10px);
+    /* background: linear-gradient(40deg, rgb(11,6,99) 4%, rgb(16,16,172) 20%, rgb(12,123,181) 78%, rgb(5,213,255) 99%); */
     color: #fff;
     text-align: center;
     padding: 0;
-    position: static;
+    border-radius: 0 0 10px 10px;
 }
 
 nav {
@@ -38,7 +42,7 @@ nav {
 }
 nav ul {
     list-style: none;
-    padding: 0;
+    margin-top: 5px;
     display: flex;
     align-items: center;
 }
@@ -51,66 +55,110 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
     transition: color 0.3s;
     font-size: 25px;
+    padding: 0 7px 5px 7px;
+    border-radius: 15px;
+    transition: all .3s;
 }
 
 nav a:hover {
-    color: #f4c542;
+    color: #252422;
+    font-size: 25px;
+    background-color: rgb(253, 253, 253);
 }
+
 
 .logo {
-    margin: 20px;
+    margin-left: 3px;
 }
-
 .logo img {
-    width: 100px;
-    height: 100px;
+    height: 50px;
     border-radius: 10px;
-    box-shadow: 3px 3px 2px 2px rgb(157, 202, 238);
+    box-shadow: 4px 3px 2px 2px rgb(33, 32, 32);
 }
 
-section {
-    text-align: center;
+#home, #about, #events, #contact {
+    min-height: 100vh;
+    width: 90%;
+}
+
+#about, #events, #contact {
+    padding-top: 80px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    margin: 20px;
     padding: 20px;
+    text-align: center;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 28px;
-    color: #006efe;
-}
-
-h3 {
-    font-size: 20px;
-    color: #104892;
-    padding: 5px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #000000;
+    border-radius: 10px;
 }
 
 .container p{
-    margin: 0 20px
+    text-align: justify;
+    margin: auto;
+    margin-top: 20px;
+    width: 70%;
 }
 
-img {
-    height: 30px;
-    
+span {
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.carousel-item img {
+    width: 30%;
+}
+
+.carousel-inner img{
+    padding: 10px;
+    margin: auto;
+}
+
+.social-links img {
+    height: 50px;
+}
+
+#home {
+    background: linear-gradient(40deg, rgba(11,6,99,0.8968837535014006) 4%, rgba(16,16,172,0.7904411764705882) 20%, rgba(12,123,181,0.7988445378151261) 78%, rgba(5,213,255,0.7232142857142857) 99%);
+}
+
+#about{
+    background: linear-gradient(240deg, rgba(11,6,99,0.8968837535014006) 4%, rgba(16,16,172,0.7904411764705882) 20%, rgba(12,123,181,0.7988445378151261) 78%, rgba(5,213,255,0.7232142857142857) 99%);
+}
+
+#events{
+    background: linear-gradient(40deg, rgba(11,6,99,0.8968837535014006) 4%, rgba(16,16,172,0.7904411764705882) 20%, rgba(12,123,181,0.7988445378151261) 78%, rgba(5,213,255,0.7232142857142857) 99%);
+}
+
+#contact{
+    background: linear-gradient(240deg, rgba(11,6,99,0.8968837535014006) 4%, rgba(16,16,172,0.7904411764705882) 20%, rgba(12,123,181,0.7988445378151261) 78%, rgba(5,213,255,0.7232142857142857) 99%);
+}
+
+#contact p {
+    text-align: center;
+}
+
+#contact p a {
+    text-decoration: none;
+    color: rgb(13, 254, 58);
+}
+
+#contact p a:hover {
+    color: rgb(248, 239, 0);
 }
 
 .social-links{
@@ -118,11 +166,23 @@ img {
     justify-content: space-around;
     width: 40%;
     margin: auto;
+    margin-top: 100px;
     padding: 10px 0;
 }
 
+#quotes {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+#quotes p { display: none;}
+
 footer {
-    background-color: #006efe;
+    background: #0075b9ca;
+    backdrop-filter: blur(10px);
     color: #fff;
     text-align: center;
     padding: 10px;
