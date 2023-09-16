@@ -195,3 +195,8 @@ footer {
     padding: 10px;
     font-size: 14px;
 }
+/* Define styles for the 'active' class */
+nav ul li a.active {
+    color: black;
+    background-color: white;
+}
